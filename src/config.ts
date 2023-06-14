@@ -6,11 +6,12 @@ const exampleConfig: Config = {
     options: {
       title: 'Customer Care'
     },
-    permissions: ['V3UserManager', 'V3UserManagerWrite'],
+    permissions: ['V3UserManager'],
     children: {
+
       Search: {
         enabled: true,
-        permissions: ['V3UserManager', 'V3UserManagerWrite'],
+        permissions: ['V3UserManager'],
         options: {
           pageOrder: 0,
           title: 'Search Page Title'
@@ -22,6 +23,7 @@ const exampleConfig: Config = {
           }
         }
       },
+
       User: {
         enabled: true,
         options: {
@@ -29,10 +31,11 @@ const exampleConfig: Config = {
           title: 'User Page'
         },
         children: {
+
           Details: {
             enabled: true,
             options: {
-              componentOrder: 0,
+              componentOrder: 2,
               tiles: {
                 Tile1: {
                   title: 'Details',
@@ -44,9 +47,10 @@ const exampleConfig: Config = {
                   expanded: false,
                   fields: ['field4', 'field5']
                 }
-              }
+              },
             }
           },
+
           StateHistory: {
             enabled: true,
             options: {
@@ -54,6 +58,7 @@ const exampleConfig: Config = {
               stateOrder: 'asc'
             }
           },
+
           MessageHistory: {
             enabled: true,
             options: {

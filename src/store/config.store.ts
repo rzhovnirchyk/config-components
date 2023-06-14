@@ -7,7 +7,6 @@ export interface Config {
 }
 
 export interface Entity {
-  type?: 'feature' | 'page' | 'component' | 'field'
   enabled: true | false // BE only?
   options?: {
     [key: string]: any
@@ -26,9 +25,4 @@ export const useConfigStore = defineStore('config', {
       }
     }
   }
-  // actions: {
-  //   increment() {
-  //     this.count++
-  //   },
-  // },
 })
